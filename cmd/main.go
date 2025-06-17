@@ -30,7 +30,7 @@ import (
 // Просмотрели файл
 // go run main.go f a58c2ceb-31b0-4929-a2e8-f19263dd88c3 123.png
 func main() {
-	client := httpclient.NewCliHTTPClient("https://localhost:8000/")
+	client := httpclient.NewCliHTTPClient("http://localhost:8000/")
 	// для сохранения токена между запусками записываем его во временный файл
 	strg := storage.NewTempStorage("./storage", "access.log")
 	cmds := cmd_handler.NewCommandsHandler(client, strg)
